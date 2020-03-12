@@ -69,7 +69,7 @@ if(isset($_REQUEST['invoiceId']) && is_numeric($_REQUEST['invoiceId'])){
             'api'          => $gatewayParams['testMode'] == 'on' ? 'test' : $gatewayParams['apiToken'],
             'amount'       => $invoice->total * ($gatewayParams['currencyType'] == 'IRT' ? 10 : 1),
             'redirect'     => $gatewayParams['systemurl'] . '/modules/gateways/payir.php?invoiceId=' . $invoice->id . '&callback=1&hash=' . $hash,
-            'mobile'       => null,
+            'mobile'       => $client->phonenumber,
             'factorNumber' => $invoice->id,
             'description'  => sprintf('پرداخت فاکتور #%s', $invoice->id),
         ]);
