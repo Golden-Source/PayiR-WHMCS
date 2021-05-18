@@ -3,8 +3,8 @@
  - Author : GoldenSource.iR 
  - Module Designed For The : Pay.ir
  - Mail : Mail@GoldenSource.ir
+ - This Modules is Dedicated written for Pay.ir and You will be dealt with in case of copying.
 */
-
 use WHMCS\Database\Capsule;
 if(isset($_REQUEST['invoiceId']) && is_numeric($_REQUEST['invoiceId'])){
     require_once __DIR__ . '/../../init.php';
